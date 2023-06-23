@@ -1,15 +1,15 @@
 import { createSlice } from '@reduxjs/toolkit'
 const initialState = {
-  value: 100,
+  kart: [{name:"tomato",price:10,quantity:20}],
+  total:null
 }
-export const counterSlice = createSlice({
-  name: 'counter',
+export const kartSlice = createSlice({
+  name: 'kart',
   initialState,
   reducers: {
     increment: (state,action) => {
       state.value += Number(action.payload)
     },
-
     multi: (state,action) => {
       state.value *= Number(action.payload)
     },
@@ -20,6 +20,6 @@ export const counterSlice = createSlice({
 })
 
 
-export const { increment,multi } = counterSlice.actions
+export const { increment,multi } = kartSlice.actions
 
-export default counterSlice.reducer
+export default kartSlice.reducer
